@@ -3,20 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2208
-TARGET_SCREEN_WIDTH := 1768
+DEVICE_PATH := device/samsung/q2q
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
-
-# Inherit from the common OEM chipset makefile.
+# call the common setup
 $(call inherit-product, device/samsung/sm8350-common/common.mk)
-
-# Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/samsung/q2q/q2q-vendor.mk)
