@@ -8,8 +8,11 @@ DEVICE_PATH := device/samsung/q2q
 include device/samsung/sm8350-common/BoardConfigCommon.mk
 
 # Kernel
-TARGET_KERNEL_CONFIG		:= vendor/q2q_eur_openx_defconfig
+TARGET_KERNEL_CONFIG		:= vendor/lineage_q2q_eur_openx_defconfig
 BOARD_NAME                  := SM-F926B
+
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+#TARGET_FORCE_PREBUILT_KERNEL := true
 
 # Display
 TARGET_SCREEN_DENSITY := 372
